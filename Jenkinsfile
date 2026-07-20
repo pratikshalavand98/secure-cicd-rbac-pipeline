@@ -23,13 +23,23 @@ pipeline {
 
         stage('Deploy to Dev') {
             steps {
-                echo 'Deploying to Development Server'
+                sshagent(credentials: ['ec2-ssh-key']) {
+                    sh '''
+                    scp -o StrictHostKeyChecking=no app/index.html ubuntu@$DEV_SERVER:/tmp/index.html
+                    ssh -o StrictHostKeyChecking=no ubuntu@$DEV_SERVER "sudo mv /tmp/index.html /var/www/html/index.html"
+                    '''
+                }
             }
         }
 
         stage('Deploy to Staging') {
             steps {
-                echo 'Deploying to Staging Server'
+                sshagent(credentials: ['ec2-ssh-key']) {
+                    sh '''
+                    scp -o StrictHostKeyChecking=no app/index.html ubuntu@$STAGING_SERVER:/tmp/index.html
+                    ssh -o StrictHostKeyChecking=no ubuntu@$STAGING_SERVER "sudo mv /tmp/index.html /var/www/html/index.html"
+                    '''
+                }
             }
         }
 
@@ -41,7 +51,12 @@ pipeline {
 
         stage('Deploy to Production') {
             steps {
-                echo 'Deploying to Production Server'
+                sshagent(credentials: ['ec2-ssh-key']) {
+                    sh '''
+                    scp -o StrictHostKeyChecking=no app/index.html ubuntu@$PROD_SERVER:/tmp/index.html
+                    ssh -o StrictHostKeyChecking=no ubuntu@$PROD_SERVER "sudo mv /tmp/index.html /var/www/html/index.html"
+                    '''
+                }
             }
         }
     }
