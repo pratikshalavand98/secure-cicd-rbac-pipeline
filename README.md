@@ -1,4 +1,11 @@
 # 🔐 Secure CI/CD Pipeline with Role-Based Access and Environment Promotion Strategy
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red?logo=jenkins&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-EC2-orange?logo=amazonaws&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-Ubuntu-orange?logo=ubuntu&logoColor=white)
+![SSH](https://img.shields.io/badge/Deployment-SSH-blue?logo=linux&logoColor=white)
+![RBAC](https://img.shields.io/badge/Security-RBAC-green)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-Automated-success)
 
 ## 📌 Project Overview
 
@@ -801,3 +808,8 @@ The implementation ensures that:
 # 🎉 Project Status
 
 ## ✅ Completed Successfully
+---
+
+## 👨‍💻 Author
+
+**Aditya More**
