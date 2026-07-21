@@ -724,7 +724,56 @@ The application was successfully deployed to the Staging environment.
 
 The application was successfully deployed to the Production environment after Admin approval.
 
-# 🛠️ Infrastructure, Security & Pipeline Execution
+## 🛠️ Infrastructure, Security & Pipeline Execution
+
+...
+
+## 📸 Project Screenshots
+
+### Jenkins Pipeline Success
+![Jenkins Pipeline Success](screenshots/jenkins-console-output-success.png)
+
+### Jenkins Pipeline Stage Graph
+![Jenkins Pipeline Stage Graph](screenshots/jenkins-pipeline-stage-graph.png)
+
+### Production Approval Gate
+![Production Approval Gate](screenshots/jenkins-manual-approval-gate.png)
+
+### Jenkins RBAC Configuration
+![Jenkins RBAC Configuration](screenshots/jenkins-role-assignments.png)
+
+### AWS EC2 Environment Isolation
+![AWS EC2 Environment Isolation](screenshots/aws-ec2-instances-overview.png)
+
+### Jenkins Installation and Server Setup
+![Jenkins Installation and Server Setup](screenshots/jenkins-installation-bash-history.png)
+
+### Jenkins Security Configuration
+![Jenkins Security Configuration](screenshots/jenkins-global-security-config.png)
+
+### Jenkins Users
+![Jenkins Users](screenshots/jenkins-users-list.png)
+
+### Jenkins Pipeline Creation
+![Jenkins Pipeline Creation](screenshots/jenkins-pipeline-creation.png)
+
+### Jenkins Pipeline Dashboard
+![Jenkins Pipeline Dashboard](screenshots/jenkins-pipeline-dashboard.png)
+
+### Source Code Checkout
+![Source Code Checkout](screenshots/jenkins-console-scm-checkout.png)
+
+### Dev Environment Deployment
+![Dev Environment Deployment](screenshots/app-deployment-dev-environment.png)
+
+### Staging Environment Deployment
+![Staging Environment Deployment](screenshots/app-deployment-staging-environment.png)
+
+### Production Environment Deployment
+![Production Environment Deployment](screenshots/app-deployment-prod-environment.png)
+
+---
+
 
 ## 1. Server Architecture & User Setup
 
