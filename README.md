@@ -760,7 +760,7 @@ The application was successfully deployed to the Production environment after Ad
 
 ### Jenkins Manual Approval Gate
 
-![Jenkins Manual Approval Gate](screenshots/jenkins-manual-approval-gate.png)
+![Jenkins Manual Approval Gate](screenshots/jenkins-manual-approval-gates.png)
 
 ### Jenkins Pipeline Stage Graph
 
