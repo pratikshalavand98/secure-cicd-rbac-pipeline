@@ -60,7 +60,7 @@ The main objectives of this project are:
 
 ## 🏗️ Architecture
 
-![Secure CI/CD Pipeline Architecture](screenshots/secure-cicd-pipeline-architecture.png)
+![Secure CI/CD Pipeline Architecture](screenshots/architecture-workflow-diagram.png)
 
 ### Architecture Flow
 
@@ -730,47 +730,49 @@ The application was successfully deployed to the Production environment after Ad
 
 ## 📸 Project Screenshots
 
-### Jenkins Pipeline Success
-![Jenkins Pipeline Success](screenshots/jenkins-console-output-success.png)
+### Application Deployment - Dev Environment
 
-### Jenkins Pipeline Stage Graph
-![Jenkins Pipeline Stage Graph](screenshots/jenkins-pipeline-stage-graph.png)
+![Application Deployment Dev Environment](screenshots/app-deployment-dev-environment.png)
 
-### Production Approval Gate
-![Production Approval Gate](screenshots/jenkins-manual-approval-gate.png)
+### Application Deployment - Production Environment
 
-### Jenkins RBAC Configuration
-![Jenkins RBAC Configuration](screenshots/jenkins-role-assignments.png)
+![Application Deployment Production Environment](screenshots/app-deployment-prod-environment.png)
 
-### AWS EC2 Environment Isolation
-![AWS EC2 Environment Isolation](screenshots/aws-ec2-instances-overview.png)
+### Application Deployment - Staging Environment
+
+![Application Deployment Staging Environment](screenshots/app-deployment-staging-environment.png)
+
+### AWS EC2 Instances Overview
+
+![AWS EC2 Instances Overview](screenshots/aws-ec2-instances-overview.png)
+
+### Jenkins Console Output - Success
+
+![Jenkins Console Output Success](screenshots/jenkins-console-output-success.png)
+
+### Jenkins Global Security Configuration
+
+![Jenkins Global Security Configuration](screenshots/jenkins-global-security-config.png)
 
 ### Jenkins Installation and Server Setup
+
 ![Jenkins Installation and Server Setup](screenshots/jenkins-installation-bash-history.png)
 
-### Jenkins Security Configuration
-![Jenkins Security Configuration](screenshots/jenkins-global-security-config.png)
+### Jenkins Manual Approval Gate
 
-### Jenkins Users
-![Jenkins Users](screenshots/jenkins-users-list.png)
+![Jenkins Manual Approval Gate](screenshots/jenkins-manual-approval-gate.png)
 
-### Jenkins Pipeline Creation
-![Jenkins Pipeline Creation](screenshots/jenkins-pipeline-creation.png)
+### Jenkins Pipeline Stage Graph
 
-### Jenkins Pipeline Dashboard
-![Jenkins Pipeline Dashboard](screenshots/jenkins-pipeline-dashboard.png)
+![Jenkins Pipeline Stage Graph](screenshots/jenkins-pipeline-stage-graph.png)
 
-### Source Code Checkout
-![Source Code Checkout](screenshots/jenkins-console-scm-checkout.png)
+### Jenkins Role Assignments
 
-### Dev Environment Deployment
-![Dev Environment Deployment](screenshots/app-deployment-dev-environment.png)
+![Jenkins Role Assignments](screenshots/jenkins-role-assignments.png)
 
-### Staging Environment Deployment
-![Staging Environment Deployment](screenshots/app-deployment-staging-environment.png)
+### Jenkins Users List
 
-### Production Environment Deployment
-![Production Environment Deployment](screenshots/app-deployment-prod-environment.png)
+![Jenkins Users List](screenshots/jenkins-users-list.png)
 
 ---
 
