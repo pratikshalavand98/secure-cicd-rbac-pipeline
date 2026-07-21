@@ -122,14 +122,18 @@ A simple HTML web application was created for deployment testing.
 
 Application structure:
 
+```bash
 app/
 └── index.html
+```
 
 The application displays:
 
+```bash
 Secure CI/CD Pipeline
 Application Deployed Successfully
 Environment Deployment by Jenkins
+```
 
 The application is deployed automatically by Jenkins to the Dev, Staging, and Production environments.
 
@@ -141,72 +145,104 @@ The Jenkins CI/CD server was configured on an Ubuntu EC2 instance using Java 21 
 
 1. Verify Java Installation
 
+```bash
 java --version
+```
 
 2. Update Ubuntu Package Repository
 
+```bash
 sudo apt update
+```
 
 3. Install Java 21
 
+```bash
 sudo apt install openjdk-21-jre-headless -y
+```
 
 4. Verify Java Version
 
+```bash
 java --version
+```
 
 5. Add the Jenkins Repository Signing Key
 
+```bash
 sudo wget -O /etc/apt/keyrings/jenkins-keyring.asc \
 https://pkg.jenkins.io/debian-stable/jenkins.io-2026.key
+```
 
 6. Add the Official Jenkins Repository
 
+```bash
 echo "deb [signed-by=/etc/apt/keyrings/jenkins-keyring.asc]" \
 https://pkg.jenkins.io/debian-stable binary/ | \
 sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+```
 
 7. Update Package Repository
 
+```bash
 sudo apt update
+```
 
 8. Install Jenkins
 
+```bash
 sudo apt install jenkins -y
+```
 
 9. Start Jenkins Service
 
+```bash
 sudo systemctl start jenkins
+```
 
 10. Enable Jenkins at System Boot
 
+```bash
 sudo systemctl enable jenkins
+```
 
 11. Check Jenkins Service Status
 
+```bash
 sudo systemctl status jenkins
+```
 
 Expected status:
 
+```bash
 Active: active (running)
+```
 
 12. Check Jenkins Service Configuration
 
+```bash
 sudo systemctl is-enabled jenkins
+```
 
 Expected output:
 
+```bash
 enabled
+```
 
 13. Check Jenkins Port
 
 Jenkins runs on the default port 8080.
 
+```bash
 sudo ss -tulnp | grep 8080
+```
 
 14. Retrieve the Initial Jenkins Administrator Password
 
+```bash
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
 
 The generated password is used to complete the initial Jenkins setup through the web browser.
 
@@ -218,76 +254,108 @@ The following commands can be used to clean unnecessary files and free disk spac
 
 1. Check Current Disk Usage
 
+```bash
 df -h
+```
 
 2. Check Jenkins Workspace Usage
 
+```bash
 sudo du -sh /var/lib/jenkins/workspace
+```
 
 3. Stop Jenkins Before Cleaning Workspace
 
+```bash
 sudo systemctl stop jenkins
+```
 
 4. Remove Old Jenkins Workspace Files
 
+```bash
 sudo rm -rf /var/lib/jenkins/workspace/*
+```
 
 5. Clean Temporary Files
 
+```bash
 sudo rm -rf /tmp/*
+```
 
 6. Clean APT Package Cache
 
+```bash
 sudo apt clean
+```
 
 7. Remove Unused Packages
 
+```bash
 sudo apt autoremove -y
+```
 
 8. Reduce System Journal Logs
 
+```bash
 sudo journalctl --vacuum-size=200M
+```
 
 9. Start Jenkins Again
 
+```bash
 sudo systemctl start jenkins
+```
 
 10. Verify Jenkins Status
 
+```bash
 sudo systemctl status jenkins
+```
 
 11. Verify Available Disk Space
 
+```bash
 df -h
+```
 
 12. Verify Jenkins Workspace Usage
 
+```bash
 sudo du -sh /var/lib/jenkins/workspace
+```
 
 13. Verify Jenkins Node Status
 
 After restarting Jenkins, verify the Built-In Node from:
 
+```bash
 Jenkins Dashboard
 → Manage Jenkins
 → Nodes
 → Built-In Node
+```
 
 The node should show:
 
+```bash
 Online
+```
 
 ### Important Cleanup Note
 
 The following command removes files from the Jenkins workspace:
 
+```bash
 sudo rm -rf /var/lib/jenkins/workspace/*
+```
 
 This removes workspace copies only. It does not remove the Jenkins job configuration or the GitHub repository.
 
 Do not manually delete:
 
+```bash
 /var/lib/jenkins/jobs/
+```
 
 unless you intentionally want to remove Jenkins job configuration and build history.
 
